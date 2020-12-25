@@ -20,9 +20,10 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-tap-highlight-color: transparent;
 }
-
-.app {
-    margin-top: 2rem;
-    display: grid;
-    justify-items: center;
-}
+@import 'layout';
+@import 'headernavbar';
+// .app {
+//     margin-top: 2rem;
+//     display: grid;
+//     justify-items: center;
+// }
