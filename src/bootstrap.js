@@ -17,17 +17,17 @@ import history from './history'
 
 import Layout from "./components/layout";
 import Signin from './components/auth/signin';
-import SignUp from './components/auth/signup';
+import Signup from './components/auth/signup';
 
 function main() {
   ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
       <Router  history={history}>
         <Layout>
-          <Switch>
-            <Route patch='/' exact  component={Signin} />
-            <Route patch='/signin' exact  component={Signin} />
-            <Route patch='/signup' exact  component={SignUp} />
+        <Switch>
+            <Route path='/' exact component={Signin}/>
+            <Route path='/signin' exact component={Signin}/>
+            <Route path='/signup' exact component={Signup}/>
           </Switch>
         </Layout>
       </Router>
