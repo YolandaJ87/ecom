@@ -14,7 +14,7 @@ class SingInForm extends Component{
             {
                 _id:0,
                 title: "Not registred? Create account here.",
-                onClick: ()=> history.push('/signup')
+                onClick: () => history.push('/signup')
             },
             {
                 _id:1,

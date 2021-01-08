@@ -17,7 +17,7 @@ import history from './history'
 
 import Layout from "./components/layout";
 import Signin from './components/auth/signin';
-import Signup from './components/auth/signup';
+import SignUp from './components/auth/signup';
 
 function main() {
   ReactDOM.render(
@@ -27,7 +27,7 @@ function main() {
           <Switch>
             <Route patch='/' exact  component={Signin} />
             <Route patch='/signin' exact  component={Signin} />
-            <Route patch='/signup' exact  component={Signup} />
+            <Route patch='/signup' exact  component={SignUp} />
           </Switch>
         </Layout>
       </Router>
