@@ -9,8 +9,10 @@ const INITIAL_STATE = {
         { title: 'YOOO'}
     ],
     navbarLinks: [
-        { title: 'account' },
-        { title: 'purchases' }
+        { title: 'account',
+        active: true },
+        { title: 'purchases',
+        active: false }
     ]
 }
 

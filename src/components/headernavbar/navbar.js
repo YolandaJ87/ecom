@@ -8,7 +8,7 @@ class Navbar extends Component{
             {
                 this.props.navbarLinks.map( (link, index )=> {
                     return (
-                        <a className='navbar__link' key={index} onClick={ () => console.log('trying to swith tab')}>
+                        <a className= {`navbar__link ${link.active ? 'green-text' : ''}`} key={index} onClick={ () => console.log('trying to swith tab')}>
                             {link.title}
                         </a>
                     )
@@ -25,6 +25,6 @@ function mapStateToProps(state){
     }
 }
 
-Navbar= connect (mapStateToPProps)(Navbar);
+Navbar= connect (mapStateToProps)(Navbar);
 
 export default Navbar;
