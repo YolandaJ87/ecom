@@ -10,7 +10,7 @@ class Header extends Component{
                     {
                     this.props.headerLinks.map((link, index) => {
                         return (
-                                <a className='header__link' key={index} onClick={ () => console.log('trying to swith tab')}>
+                                <a className='header__link' key={index} onClick={ () => this.props.changeNavbarActive(link._id)}>
                                     {link.title}
                                 </a>
                             )

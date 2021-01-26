@@ -1,4 +1,5 @@
 import {
+    CHANGE_NAVBAR_ACTIVE,
     SET_HEADER_LINKS,
     SET_NAVBAR_LINKS
 } from '../actions/types';
@@ -15,13 +16,23 @@ export default function(state = INITIAL_STATE, action){
                 ...state,
                 headerLinks: action.payload
             }
-            break;
         case SET_NAVBAR_LINKS:
             return{
                 ...state,
                 navbarLinks: action.payload
             }
-            break;
+        case CHANGE_NAVBAR_ACTIVE:
+            const navbarLinks = state.navbarLinks.map( link => {
+                link.active=false;
+                if( link._id == action.payload){
+                    link.active= true;
+                }
+                return link;
+            })
+            return{
+                ...state,
+                navbarLinks
+            }
         default: return state;
     }
 }
