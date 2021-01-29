@@ -1,6 +1,12 @@
 .purchase-history {
     &__page-title{
-        // grid-row: content-s/content-e;
-        // grid-column: s/e;
+        border-bottom: 1px solid #ccc;
+    }
+    &__border-bottom{
+        border-bottom: 1px solid #f2f2f2;
     }
 }
+
+.purchases{}
+
+.purchase-detail{}
