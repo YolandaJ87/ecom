@@ -10,13 +10,99 @@ export function fetchUserPurchases(){
         payload: [
             {
                 _id: 0,
-                title: 'purchase 1',
-                amount: 8.02
+                title: 'purchase 2',
+                total: 19.40,
+                orderNumber: 'A0048248343',
+                orderDate: new Date(),
+                creditCard: '-0000',
+                user: {
+                    name: 'Jordan Hudgens',
+                    shippingAddress: '1234 West State'
+                }
             },
             {
                 _id: 1,
                 title: 'purchase 2',
-                amount: 19.40
+                total: 19.40,
+                orderNumber: 'A0048248343',
+                orderDate: new Date(),
+                creditCard: '-0000',
+                user: {
+                    name: 'Jordan Hudgens',
+                    shippingAddress: '1234 West State'
+                }
+            },
+            {
+                _id: 2,
+                title: 'purchase 2',
+                total: 19.40,
+                orderNumber: 'A0048248343',
+                orderDate: new Date(),
+                creditCard: '-0000',
+                user: {
+                    name: 'Jordan Hudgens',
+                    shippingAddress: '1234 West State'
+                }
+            },
+            {
+                _id: 3,
+                title: 'purchase 2',
+                total: 19.40,
+                orderNumber: 'A0048248343',
+                orderDate: new Date(),
+                creditCard: '-0000',
+                user: {
+                    name: 'Jordan Hudgens',
+                    shippingAddress: '1234 West State'
+                }
+            },
+            {
+                _id: 4,
+                title: 'purchase 2',
+                total: 19.40,
+                orderNumber: 'A0048248343',
+                orderDate: new Date(),
+                creditCard: '-0000',
+                user: {
+                    name: 'Jordan Hudgens',
+                    shippingAddress: '1234 West State'
+                }
+            },
+            {
+                _id: 5,
+                title: 'purchase 2',
+                total: 19.40,
+                orderNumber: 'A0048248343',
+                orderDate: new Date(),
+                creditCard: '-0000',
+                user: {
+                    name: 'Jordan Hudgens',
+                    shippingAddress: '1234 West State'
+                }
+            },
+            {
+                _id: 6,
+                title: 'purchase 2',
+                total: 19.40,
+                orderNumber: 'A0048248343',
+                orderDate: new Date(),
+                creditCard: '-0000',
+                user: {
+                    name: 'Jordan Hudgens',
+                    shippingAddress: '1234 West State'
+                }
+            },
+            {
+                _id: 7,
+                title: 'purchase 2',
+                total: 19.40,
+                orderNumber: 'A0048248343',
+                orderDate: new Date(),
+                creditCard: '-0000',
+                user: {
+                    name: 'Jordan Hudgens',
+                    shippingAddress: '1234 West State'
+                }
             }
         ]
     })
