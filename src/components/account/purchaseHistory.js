@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import PageTitle from '../pageTitle';
+import AccountInformation from './accountInformation';
 import PurchaseDetail from './purchaseDetail';
 import Purchases from './purchases';
 
