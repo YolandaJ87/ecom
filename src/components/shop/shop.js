@@ -14,10 +14,8 @@ class Shop extends Component{
         ]
         this.props.setHeaderLinks(headerLinks);
         this.props.fetchShopCategories();
-        //fetch shop products action creator
-        //fetch navbar links
-            //set navbar link --> donde nos permitira filtrar por tipo de Productos a mostrar en el componente
-                //all   javascrip ui/ux linux   python  uml ruby
+        // filter products with links
+        this.props.fetchShopProducts();
         
     }
     render (){
