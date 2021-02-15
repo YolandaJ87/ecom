@@ -4,7 +4,6 @@ import * as actions from '../../actions';
 
 class Shop extends Component{
     componentDidMount(){
-        //set header links
         const headerLinks = [
             { 
                 _id: 0, 
@@ -16,7 +15,6 @@ class Shop extends Component{
         this.props.fetchShopCategories();
 
         this.props.fetchShopProducts();
-        
     }
     shouldComponentUpdate(nextProps) {
         if(this.props != nextProps ) {
@@ -27,11 +25,26 @@ class Shop extends Component{
 
 
     render (){
-        this.props.setNavbarLinks(this.props.categories);
         return( 
             <div className="shop">  
             {/* barra de busqueda */}
-            {/* componente de productos */}
+            <div className="shop__prodcuts">
+                {
+                    this.props.filteredPRoducts.map(product => {
+                        return (
+                            <div key={product._id} className="shop-product">
+                                <div className="shop-product__title"> 
+                                    {product.title}
+                                </div>
+                                <div className="shop-product__description">
+                                    {product.description}
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+            </div>
+
             {/* boton carro compra */}
                 Shop ....
             </div>
@@ -39,9 +52,10 @@ class Shop extends Component{
     };
 }
 function mapStateToProps( state ){
-    const { categories } = state.shop;
+    const { categories, filteredPRoducts } = state.shop;
     return{
-        categories
+        categories, 
+        filteredPRoducts
     };
 }
 Shop=connect(mapStateToProps, actions)(Shop);
