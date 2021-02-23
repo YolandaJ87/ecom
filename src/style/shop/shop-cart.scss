@@ -1,8 +1,4 @@
 .shop-cart{
-    // height: 675px;
-    // width: 520px;
-    // background-color: #333;
-    // box-shadow: -3px 20px 20px 0 rgba(0,0,0,0.2);
     display: grid;
     grid-template-rows: [tog-s] 40px [tog-e cont-s] 1fr [cont-e];
     grid-template-columns: [s] 1fr [e];
@@ -57,4 +53,37 @@
     &__footer{
         display: grid;
     }
+}
+
+.cart-footer{
+    &__checkout{
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        
+        height: 38px;
+        width: 183px;
+        border-radius: 20px;
+        background-color: #00CB79;
+        color:  white;
+        font-size: 1.6rem;
+        font-weight: 600;
+        transition: all .3s ease;
+
+        &:hover{
+            transform: scale(0.97);
+        }
+
+        &:active{
+            transform: scale(0.95);
+        }
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+    &___toggle{}
+    &__content{}
+
 }
