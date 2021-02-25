@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CartProduct from './cartProducts';
 
 function CartButton ({className, icon}){
     //boton cierre carrito
@@ -11,7 +12,8 @@ function CartButton ({className, icon}){
 
 function CartContent({className, products}){
     let count = products.length;
-    let productsJSK = products.map( product => <h1 key={product} >{product}</h1>);
+    let productsJSK = products.map( product => <CartProduct key={product} className='' title='' price='' quantity='' /> );
+    // let productsJSK = products.map( product => <h1 key={product} >{product}</h1>);
     
     return (
         <div className={`${className} cart-content`}>
@@ -49,7 +51,7 @@ class ShopCart extends Component{
         return (
             <div className={`${className} shop-cart`} >
                 <CartButton className='shop-cart__toggle' icon='fas fa-times'/>
-                <CartContent className='shop-cart__content' products={[234, 54, 45]}/>
+                <CartContent className='shop-cart__content' products={[234, 54, 45, 235, 55, 46, 237, 88, 49]}/>
             </div>
         )
     };
