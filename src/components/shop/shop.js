@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 import ShopCart from './shopCart';
-import ShopProducts from './shopProducts';
+import ShopProduct from './shopProduct';
 import ShopSearchBar from './shopSearchBar';
 
 class Shop extends Component {
@@ -40,7 +40,7 @@ class Shop extends Component {
     }
 
     render() {
-        return <ShopCart className='shop__cart'/>
+        return (<ShopCart className='shop__cart'/>)
 
         return (
             <div className='shop'>
@@ -49,7 +49,7 @@ class Shop extends Component {
                     {
                         this.props.filteredProducts.map(product => {
                             return (
-                                <ShopProducts {...product} key={product._id}/>
+                                <ShopProduct {...product} key={product._id}/>
                             )
                         })
                     }
