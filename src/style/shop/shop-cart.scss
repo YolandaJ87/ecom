@@ -1,4 +1,6 @@
 .shop-cart{
+    transition:  all .3s ease;
+
     display: grid;
     grid-template-rows: [tog-s] 40px [tog-e cont-s] 1fr [cont-e];
     grid-template-columns: [s] 1fr [e];
@@ -8,10 +10,9 @@
         grid-row: tog-s/tog-e;
         grid-column: s/e;
         justify-self: end;
+
+        z-index: 6;
         
-        display: grid;
-        justify-items: center;
-        align-items: center;
     }
     &__content{
         grid-row: cont-s/cont-e;
@@ -21,6 +22,7 @@
 
 .shop-cart{
     &__toggle{
+        z-index: 6;
     }
 
     &__content{
@@ -32,12 +34,19 @@
 }
 
 .cart-button{
+    transition:  all .3s ease;
+    
     background-color: #333;
     color: white;
     font-size: 20px;
     border-radius: 25px 0 0 25px;
     height: 40px;
     width: 76px;
+
+    
+    display: grid;
+    justify-items: center;
+    align-items: center;
 }
 
 .cart-content{
@@ -135,4 +144,8 @@
         font-weight: 600;
     }
 
+}
+
+.cart-hidden{
+    transform: translateX(520px);
 }
