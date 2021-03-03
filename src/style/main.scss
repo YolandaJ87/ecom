@@ -41,5 +41,7 @@ body {
 @import 'shop/shop-cart';
 @import 'shop/cart-prouct';               
 
-@import './quantity';
+@import 'quantity';
 @import 'green-price-tag';
+
+@import 'order/review';
