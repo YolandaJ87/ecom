@@ -32,7 +32,7 @@ class ReviewForm extends Component{
     };
 }
 ReviewForm = reduxForm({
-    form: 'SignIn'
+    form: 'ReviewForm'
 })(ReviewForm);
 
 export default ReviewForm;
