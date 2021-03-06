@@ -1,27 +1,19 @@
 import React, { Component } from 'react';
+import GreenPriceTag from '../greenPriceTag';
 
-import { connect } from 'react-redux';
-
-class ReviewProducts extends Component{
+class ReviewProduct extends Component{
     render (){
-        const{className} = this.props;
+        const {product, quantity} = this.props;
+        const {title, imageUrl, price} = product;
         return (
-            <div className={`${className} review-products`} >
-                {
-                    this.props.cartProducts.map(cartPRoduct => {
-                        return (<h1 key={cartPRoduct._id}>{cartPRoduct.product.title}</h1>)
-                    })
-                }
+            <div className='review-product' >
+                <img className='review-product__image' src={imageUrl}/>
+                <div className='review-product__title'>{title}</div>
+                <div className='review-product__quantity'>{quantity}</div>
+                <GreenPriceTag className='review-product__price' title={price * quantity}/>
             </div>
-        );
+        )
     };
 }
 
-function mapStateToProps(state){
-    const{ cartProducts } = state.user;
-    return {cartProducts}
-}
-
-ReviewProducts = connect (mapStateToProps)(ReviewProducts);
-
-export default ReviewProducts;
+export default ReviewProduct;
